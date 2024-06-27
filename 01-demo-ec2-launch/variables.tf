@@ -8,3 +8,16 @@ variable "ssh-key-name" {
     default = "terraform-key"
     type = string
 }
+
+variable "instance_type_list" {
+    type = list(string)
+    default = ["t2.micro"]
+}
+
+variable "instance_type_map" {
+    type = map(string)
+    default = {
+      "test" = "t3.micro"
+    }
+  
+}
